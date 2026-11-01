@@ -1,55 +1,124 @@
-# Simulador de Conta Bancária
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java Badge"/>
+  <img src="https://img.shields.io/badge/POO-Concepts-blue?style=for-the-badge" alt="POO Badge"/>
+  <img src="https://img.shields.io/badge/Status-Complete-brightgreen?style=for-the-badge" alt="Status Badge"/>
+</p>
 
-Projeto Java que simula operações bancárias através do terminal/console, demonstrando fundamentos da linguagem e conceitos de Programação Orientada a Objetos.
+<h1 align="center">🏦 Simulador de Conta Bancária</h1>
 
-## Funcionalidades
+<p align="center">
+  <em>Projeto educacional demonstrando fundamentos de Java e Programação Orientada a Objetos através de uma simulação interativa de conta bancária via terminal.</em>
+</p>
 
-- **Abertura de Conta**: Coleta dados do cliente (nome, agência, número da conta e saldo inicial)
-- **Depósito**: Permite adicionar valores à conta
-- **Saque**: Permite retirar valores da conta (com verificação de saldo)
-- **Consulta**: Exibe todos os dados da conta
+---
 
-## Conceitos Demonstrados
+## 📋 Sobre o Projeto
+
+Este projeto foi desenvolvido como parte do desafio **Java Challengers**, com o objetivo de colocar em prática os fundamentos da linguagem Java e conceitos de Programação Orientada a Objetos (POO).
+
+A aplicação simula operações bancárias básicas através de uma interface de linha de comando (CLI), permitindo que o usuário interaja com sua conta realizando depósitos, saques e consultas.
+
+---
+
+## ✨ Funcionalidades
+
+| Funcionalidade | Descrição |
+|----------------|-----------|
+| 🆕 **Abertura de Conta** | Coleta dados do cliente e cria uma nova conta bancária |
+| 💰 **Depósito** | Adiciona valores à conta com validação |
+| 🏧 **Saque** | Retira valores da conta com verificação de saldo |
+| 📊 **Consulta** | Exibe todos os dados cadastrais e saldo atual |
+
+---
+
+## 🎯 Conceitos Demonstrados
 
 ### Fundamentos da Linguagem Java
-- Variáveis e tipos de dados (String, int, double)
-- Operadores aritméticos e lógicos
-- Estruturas condicionais (if/else, switch)
-- Estruturas de repetição (do-while)
-- Entrada de dados via Scanner
-- Formatação de saída (printf, String.format)
+
+| Conceito | Implementação |
+|----------|---------------|
+| **Tipos de Dados** | `String`, `int`, `double` para armazenar informações |
+| **Operadores** | Aritméticos (`+`, `-`, `+=`) e lógicos (`>`, `<=`, `&&`) |
+| **Estruturas Condicionais** | `if/else` para validações, `switch` para menu |
+| **Estruturas de Repetição** | `do-while` para loop do menu |
+| **Entrada de Dados** | Classe `Scanner` para leitura via teclado |
+| **Formatação** | `printf()` e `String.format()` para saída formatada |
 
 ### Programação Orientada a Objetos
-- **Classes e Objetos**: Criação da classe `Conta` com atributos e métodos
-- **Encapsulamento**: Atributos privados com getters e setters
-- **Construtores**: Inicialização de objetos com parâmetros
-- **Métodos**: Operações de depósito, saque e consulta
-- **Sobrescrita**: Método `toString()` para representação textual
 
-## Estrutura do Projeto
+| Conceito | Aplicação no Projeto |
+|----------|----------------------|
+| 📦 **Classes e Objetos** | Classe `Conta` modela a entidade bancária |
+| 🔒 **Encapsulamento** | Atributos privados com getters e setters |
+| 🏗️ **Construtores** | Inicialização de objetos com parâmetros obrigatórios |
+| ⚙️ **Métodos** | Operações encapsuladas (depositar, sacar, toString) |
+| 🔄 **Sobrescrita** | Método `toString()` personalizado |
+
+---
+
+## 📁 Estrutura do Projeto
 
 ```
 conta-bancaria/
-├── src/
-│   ├── ContaBancaria.java    # Classe principal com método main
-│   └── Conta.java            # Classe que representa a conta bancária
-└── README.md
+│
+├── 📄 README.md                    # Documentação do projeto
+│
+└── 📂 src/
+    ├── 📄 Conta.java               # Classe modelo (entidade)
+    ├── 📄 Conta.class              # Bytecode compilado
+    ├── 📄 ContaBancaria.java       # Classe principal (main)
+    └── 📄 ContaBancaria.class      # Bytecode compilado
 ```
 
-## Como Executar
+### Descrição das Classes
 
-1. **Compilar os arquivos Java:**
-   ```bash
-   cd conta-bancaria/src
-   javac *.java
-   ```
+#### `Conta.java`
+Classe que representa a entidade **Conta Bancária**, contendo:
+- **Atributos privados**: nomeCliente, agencia, numero, saldo
+- **Construtor**: Inicialização com todos os dados
+- **Métodos de negócio**: depositar(), sacar()
+- **Getters/Setters**: Acesso e modificação controlada
+- **toString()**: Representação textual formatada
 
-2. **Executar o programa:**
-   ```bash
-   java ContaBancaria
-   ```
+#### `ContaBancaria.java`
+Classe principal que contém o método `main`, responsável por:
+- Coletar dados do usuário via terminal
+- Instanciar objeto `Conta`
+- Gerenciar menu de operações
+- Controlar fluxo da aplicação
 
-## Exemplo de Uso
+---
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+
+- ☕ **Java JDK 8** ou superior
+- 💻 Terminal/Console (PowerShell, CMD, Bash, etc.)
+
+### Passo a Passo
+
+1️⃣ **Clone ou navegue até o diretório do projeto:**
+
+```bash
+cd c:\Develompment\WS-Personal\1 - Java_Challengers\conta-bancaria\src
+```
+
+2️⃣ **Compile os arquivos Java:**
+
+```bash
+javac *.java
+```
+
+3️⃣ **Execute a aplicação:**
+
+```bash
+java ContaBancaria
+```
+
+---
+
+## 💻 Exemplo de Execução
 
 ```
 ====================================
@@ -88,11 +157,53 @@ Depósito de R$ 500.00 realizado com sucesso!
 Saldo atual: R$ 1500.00
 ```
 
-## Requisitos
+---
 
-- Java JDK 8 ou superior
-- Terminal/Console
+## 🔒 Validações Implementadas
 
-## Autor
+✅ **Depósito**: Aceita apenas valores positivos
 
-Desenvolvido como parte do desafio "Java Challengers" para praticar fundamentos da linguagem Java e conceitos de POO.
+✅ **Saque**: 
+- Verifica se o valor é positivo
+- Verifica se há saldo suficiente antes de debitar
+
+✅ **Menu**: Trata opções inválidas com mensagem de erro
+
+---
+
+## 📚 Aprendizados
+
+Este projeto permitiu praticar:
+
+- ✅ Criação de classes e objetos em Java
+- ✅ Aplicação do princípio de encapsulamento
+- ✅ Uso de construtores para inicialização de objetos
+- ✅ Implementação de métodos com lógica de negócio
+- ✅ Manipulação de entrada de dados via Scanner
+- ✅ Formatação de saída com printf e String.format
+- ✅ Estruturação de código em múltiplas classes
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Uso |
+|------------|-----|
+| ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) | Linguagem de programação principal |
+| ![Terminal](https://img.shields.io/badge/Terminal-4D4D4D?style=flat-square&logo=windows-terminal&logoColor=white) | Interface de interação com o usuário |
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido como parte do desafio **Java Challengers** para prática e consolidação de conhecimentos em Java e POO.
+
+---
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20with-☕-orange?style=for-the-badge" alt="Made with Java"/>
+</p>
+
+<p align="center">
+  <strong>⭐ Se este projeto foi útil, deixe uma estrela! ⭐</strong>
+</p>
